@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Categoriyalar</title>
+</head>
+<body>
+  <h1>Bo'limlar ro'yxati</h1>
+  {% for category in categories %}
+    {{category.name}} --> {{category.description}}
+    <br>
+    {% for pr in category.products.all %}
+    -{{pr.name}} -> {{pr.price}}
+    <br>
+    {% endfor %}
+  {% endfor %}
+</body>
+</html>
